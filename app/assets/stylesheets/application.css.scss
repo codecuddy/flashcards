@@ -17,3 +17,66 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+	background-color: #021D9F;
+}
+
+nav {
+  box-shadow: 0 1px 2px 0 rgba(82,158,204, 0.22);
+  box-color: #F7C21A;
+  background: #F7C21A;
+
+  .navbar-brand {
+    a {
+      color: #F7C21A;
+      font-weight: bold;
+      font-size: 1.6em;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hello_user {
+  text-decoration: none;
+  pointer-events: none;
+  cursor: default;
+}
+.card-title {
+
+}
+.card-title-style {
+  background-color: #222222;
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  a {
+    color: #F7C21A;
+  }
+}
+
+.panel-body {
+  h1 {
+    color: #F7C21A;
+  }
+}
+
+.forms-field {
+  color: #F7C21A;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #222222;
+  text-align: center;
+}
+
+
+
+

@@ -1,3 +1,6 @@
 .panel-body
   %h1= "Front: #{@card.title}"
   %h1= "Back: #{@card.description}"
+
+  = link_to "Edit", edit_card_path, class: "btn btn-info"
+  = link_to "Delete", card_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

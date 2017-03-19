@@ -6,6 +6,7 @@ class CardsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -26,6 +27,11 @@ class CardsController < ApplicationController
   end
 
   def update
+  	if @card.update(card_params)
+  	  redirect_to @card, notice: "Card Updated"
+  	else
+  	  render 'edit'
+  	end
   end
 
   def destroy
