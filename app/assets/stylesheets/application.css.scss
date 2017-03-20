@@ -23,16 +23,13 @@ body {
 }
 
 nav {
-  box-shadow: 0 1px 2px 0 rgba(82,158,204, 0.22);
-  box-color: #F7C21A;
-  background: #F7C21A;
-
   .navbar-brand {
     a {
       color: #F7C21A;
       font-weight: bold;
       font-size: 1.6em;
-      &:hover {
+    &:hover {
+        color: #021D9F;
         text-decoration: none;
       }
     }
@@ -44,18 +41,23 @@ nav {
   pointer-events: none;
   cursor: default;
 }
-.card-title {
 
-}
-.card-title-style {
+.card-title-box {
   background-color: #222222;
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 500px;
   text-align: center;
   a {
     color: #F7C21A;
   }
+
+  h2 {
+    margin: auto auto auto auto;
+    padding: 110px 15px 100px 15px;
+
+  }
 }
+
 
 .panel-body {
   h1 {
@@ -65,16 +67,6 @@ nav {
 
 .forms-field {
   color: #F7C21A;
-}
-
-.footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #222222;
-  text-align: center;
 }
 
 
