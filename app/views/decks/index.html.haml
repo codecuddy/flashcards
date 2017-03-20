@@ -1,0 +1,6 @@
+.col-sm-6.col-sm-offset-3
+  - @decks.each do |deck|
+    .box.panel.panel-default.deck-title-box
+      %h2= link_to deck.title.truncate_words(20), deck, class: "deck-title"
+        
+     

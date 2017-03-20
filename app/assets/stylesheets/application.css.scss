@@ -42,6 +42,25 @@ nav {
   cursor: default;
 }
 
+.deck-title-box {
+  background-color: #222222;
+  height: 300px;
+  width: 500px;
+  text-align: center;
+    a {
+      color: #F7C21A;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;;
+      }
+    }
+  }
+
+  h2 {
+    margin: auto auto auto auto;
+    padding: 110px 15px 100px 15px;
+}
+
 .card-title-box {
   background-color: #222222;
   height: 300px;
@@ -71,6 +90,10 @@ nav {
 
 .forms-field {
   color: #F7C21A;
+  padding: 0 100px 0 100px;
+  h1 {
+    margin-left: 100px;
+  }
 }
 
 

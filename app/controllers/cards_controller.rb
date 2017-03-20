@@ -1,52 +1,45 @@
 class CardsController < ApplicationController
-   before_action :find_card, only: [:show, :edit, :update, :destroy]
 
-  def index
-  	@cards = Card.all.order("created_at DESC")
-  end
-
-  def show
-
-  end
-
-  def new
-  	@card = Card.new
-  end
-
+  before_action :find_deck, only: [:create, :edit, :update, :destroy]
+  before_action :find_card, only: [:edit, :update, :destroy]
   def create
-  	@card = Card.new(card_params)
+    @card = @deck.cards.create(card_params)
 
-  	if @card.save
-  	  redirect_to @card, notice: "Card Created"
-  	else
-  	  render 'new'
-  	end
+    if @card.save
+      redirect_to deck_path(@deck)
+    else
+      render 'new'
+    end
   end
 
   def edit
   end
 
   def update
-  	if @card.update(card_params)
-  	  redirect_to @card, notice: "Card Updated"
-  	else
-  	  render 'edit'
-  	end
+    if @card.update(card_params)
+    redirect_to deck_path(@deck)
+    else
+    render 'edit'
+    end
   end
 
   def destroy
-  	@card.destroy
-    redirect_to root_path
+    @card.destroy
+    redirect_to deck_path(@deck)
   end
-
 
   private
 
   def card_params
-    params.require(:card).permit(:title, :description)
+    params.require(:card).permit(:content)
+  end
+
+  def find_deck 
+    @deck = Deck.find(params[:deck_id])
   end
 
   def find_card
-  	@card = Card.find(params[:id])
+    @card = @card.decks.find(params[:id])
   end
+
 end

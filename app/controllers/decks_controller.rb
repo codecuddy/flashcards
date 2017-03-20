@@ -15,7 +15,7 @@ class DecksController < ApplicationController
   end
 
   def create
-  	@deck = Deck.new(card_params)
+  	@deck = Deck.new(deck_params)
 
   	if @deck.save
   	  redirect_to @deck, notice: "Deck Created"
@@ -39,7 +39,7 @@ class DecksController < ApplicationController
   	@deck.destroy
     redirect_to root_path
   end
-
+end
 
   private
 
@@ -50,5 +50,5 @@ class DecksController < ApplicationController
   def find_deck
   	@deck = Deck.find(params[:id])
   end
-end
-end
+
+

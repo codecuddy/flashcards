@@ -1,0 +1,8 @@
+.panel-body
+  %hr
+  %h1= "Topic: #{@deck.title}"
+  %hr
+  %h1= "Descriptoin: #{@deck.description}"
+  %hr
+  = link_to "Edit", edit_deck_path, class: "btn btn-info"
+  = link_to "Delete", deck_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
