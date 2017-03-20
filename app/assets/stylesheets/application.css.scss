@@ -29,7 +29,7 @@ nav {
       font-weight: bold;
       font-size: 1.6em;
     &:hover {
-        color: #021D9F;
+        color: #ffffff;
         text-decoration: none;
       }
     }
@@ -47,16 +47,20 @@ nav {
   height: 300px;
   width: 500px;
   text-align: center;
-  a {
-    color: #F7C21A;
+    a {
+      color: #F7C21A;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;;
+      }
+    }
   }
 
   h2 {
     margin: auto auto auto auto;
     padding: 110px 15px 100px 15px;
-
-  }
 }
+
 
 
 .panel-body {
@@ -68,6 +72,7 @@ nav {
 .forms-field {
   color: #F7C21A;
 }
+
 
 
 
