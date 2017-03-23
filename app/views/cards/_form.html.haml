@@ -1,15 +1,10 @@
-= simple_form_for @card, html: { multipart: true } do |f|
-  - if @card.errors.any?
-    #errors	  
-      %h2
-      = pluralize(@card.errors.count, "error")
-      prevented this picture from saving
-      %ul
-        - @card.errors.full_messages.each do |msg|
-          %li= msg
-  .forms-field 
+.forms-field 
+  %h1= "New Card in the '#{@deck.title}' deck"
+  = simple_form_for ([@deck, @deck.cards.build]) do |f|
     .form-group
-      = f.input :title, input_html: { class: 'form-control' }
-    .form-group
-      = f.input :description, input_html: { class: 'form-control' }
+      = f.input :title, label: "Front of Card"
+      = f.input :description, label: "Back of Card"
     = f.submit :submit, class: "btn btn-info"
+
+
+

@@ -7,7 +7,6 @@ class DecksController < ApplicationController
   end
 
   def show
-
   end
 
   def new
@@ -47,8 +46,5 @@ end
     params.require(:deck).permit(:title, :description)
   end
 
-  def find_deck
-  	@deck = Deck.find(params[:id])
-  end
 
 
