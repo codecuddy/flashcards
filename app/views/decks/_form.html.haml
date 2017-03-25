@@ -9,8 +9,8 @@
           %li= msg
   .forms-field 
     .form-group
-      = f.input :title, input_html: { class: 'form-control' }
+      = f.input :title, label: "Title of Deck", input_html: { class: 'form-control' }
     .form-group
-      = f.input :description, input_html: { class: 'form-control' }
+      = f.input :description, label: "What is this Deck All About?", input_html: { class: 'form-control' }
     = f.submit :submit, class: "btn btn-info"
-    = link_to "Back", deck_path, class: "btn btn-info"
+    = link_to "Back", root_path, class: "btn btn-info"

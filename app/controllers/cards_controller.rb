@@ -6,7 +6,7 @@ class CardsController < ApplicationController
   def create
     @card = @deck.cards.create(card_params)
     if @card.save
-      redirect_to deck_path(@deck)
+      redirect_to deck_path(@deck), notice: "Card Created"
     else
       render 'new'
     end
@@ -15,12 +15,9 @@ class CardsController < ApplicationController
   def edit
   end
 
-  def show
-  end
-
   def update
     if @card.update(card_params)
-      redirect_to deck_path(@deck)
+      redirect_to deck_path(@deck), notice: "Card Updated"
     else
       render 'edit'
     end
@@ -34,7 +31,7 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:content)
+    params.require(:card).permit(:card_title, :card_description)
   end
 
   def find_deck 

@@ -46,5 +46,9 @@ end
     params.require(:deck).permit(:title, :description)
   end
 
+  def find_deck
+    @deck = Deck.find(params[:id])
+  end
+
 
 

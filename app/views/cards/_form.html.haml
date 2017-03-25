@@ -1,10 +1,8 @@
-.forms-field 
-  %h1= "New Card in the '#{@deck.title}' deck"
-  = simple_form_for ([@deck, @deck.cards.build]) do |f|
+= simple_form_for ([@deck, @deck.cards.create]) do |f| 
+  %h1= "New Card in the #{@deck.title} deck"
+  .forms-field 
     .form-group
       = f.input :title, label: "Front of Card"
       = f.input :description, label: "Back of Card"
     = f.submit :submit, class: "btn btn-info"
-
-
 

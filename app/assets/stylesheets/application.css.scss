@@ -56,12 +56,19 @@ nav {
     }
   }
 
-  h2 {
+  .card {
+    color: #F7C21A;
     margin: auto auto auto auto;
-    padding: 110px 15px 100px 15px;
+    padding: 110px 15px 70px 15px;
+}
+
+.card-cards {
+    color: #F7C21A;
+    margin: auto auto auto auto;
+    padding: 00px 15px 70px 15px;
 }
   
-  h3 {
+  h2, h3 {
     color: #F7C21A;
   }
 

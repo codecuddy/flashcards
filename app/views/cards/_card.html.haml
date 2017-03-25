@@ -1,5 +1,10 @@
-.card
-  %h2= card.title
+.col-sm-6.col-sm-offset-3
+  .card
+    .card-cards
+      %h3= "Front of Card"
+      = @deck.cards
 
-  = link_to "Edit", edit_deck_card_path(card.deck, card), class: "btn btn-info"
-  = link_to "Delete", deck_card_path(card.deck, card), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+
+      %h3= "Back of Card"
+      = @deck.cards
+    = link_to "Delete Card", deck_card_path(@deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

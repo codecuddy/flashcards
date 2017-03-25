@@ -1,6 +1,7 @@
 .col-sm-6.col-sm-offset-3
   - @decks.each do |deck|
     .box.panel.panel-default.deck-title-box
-      %h2= link_to deck.title.truncate_words(20), "/decks/:deck_id/cards/:id", class: "deck-title"
-      = link_to (deck) do
-        Create a Card for this Deck
+      .card
+        %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"
+        %p= deck.description.truncate_words(20)
+
