@@ -6,4 +6,5 @@
 
       %h3= "Back of Card"
       %p= card.description
-      = link_to "Edit Card", edit_deck_card_path(@deck.cards), class: "btn btn-info"
+      = link_to "Edit Card", edit_deck_card_path(card.deck, card), class: "btn btn-info"
+

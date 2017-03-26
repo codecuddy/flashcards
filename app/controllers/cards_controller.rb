@@ -34,17 +34,21 @@ class CardsController < ApplicationController
 
   private
 
+  def deck_params
+    params.require(:deck).permit(:title, :description)
+  end
+
   def card_params
-    params.require(@deck.card).permit(:title, :description)
+    params.require(:card).permit(:title, :description)
   end
 
   def find_deck 
     @deck = Deck.find(params[:deck_id])
-    render action: '_card'
+
   end
 
   def find_card
-    @card = @deck.cards.find(params[:id])
+    @card = Card.find(params[:id])
   end
 
 end
