@@ -10,11 +10,11 @@ class DecksController < ApplicationController
   end
 
   def new
-  	@deck = @decks.build
+  	@deck = Deck.new
   end
 
   def create
-  	@deck = @decks.build(deck_params)
+  	@deck = Deck.new(deck_params)
 
   	if @deck.save
   	  redirect_to @deck, notice: "Deck Created"
