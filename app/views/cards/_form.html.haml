@@ -1,5 +1,5 @@
 = simple_form_for ([@deck, @deck.cards.create]) do |f| 
-  %h1= "New Card in the #{@deck.title} deck"
+  %h3= "New Card in the #{@deck.title} deck"
   .forms-field 
     .form-group
       = f.input :title, label: "Front of Card"

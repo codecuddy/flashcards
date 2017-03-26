@@ -1,7 +1,7 @@
 class CardsController < ApplicationController
 
-  before_action :find_deck, only: [:create, :edit, :update, :destroy]
-  before_action :find_card, only: [:edit, :update, :destroy]
+  before_action :find_deck, only: [:show, :edit, :create, :update, :destroy]
+  before_action :find_card, only: [:show, :edit, :update, :destroy]
 
   def create
     @card = @deck.cards.create(card_params)
@@ -10,6 +10,10 @@ class CardsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @cards = Card.all.order("created_at DESC")
   end
 
   def edit
@@ -31,11 +35,12 @@ class CardsController < ApplicationController
   private
 
   def card_params
-    params.require(:card).permit(:card_title, :card_description)
+    params.require(@deck.card).permit(:title, :description)
   end
 
   def find_deck 
     @deck = Deck.find(params[:deck_id])
+    render action: '_card'
   end
 
   def find_card

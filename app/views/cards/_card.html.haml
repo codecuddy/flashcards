@@ -1,10 +1,9 @@
 .col-sm-6.col-sm-offset-3
-  .card
-    .card-cards
+  - @deck.cards.each do |card|
+    .box.panel.panel-default.show-card-box
       %h3= "Front of Card"
-      = @deck.cards
-
+      %p= card.title
 
       %h3= "Back of Card"
-      = @deck.cards
-    = link_to "Delete Card", deck_card_path(@deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+      %p= card.description
+      = link_to "Edit Card", edit_deck_card_path(@deck.cards), class: "btn btn-info"
