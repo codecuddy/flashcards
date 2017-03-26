@@ -59,13 +59,13 @@ nav {
   .card {
     color: #F7C21A;
     margin: auto auto auto auto;
-    padding: 110px 15px 70px 15px;
+    padding: 80px 15px 70px 15px;
 }
 
 .card-cards {
     color: #F7C21A;
     margin: auto auto auto auto;
-    padding: 00px 15px 70px 15px;
+    padding: 0px 15px 70px 15px;
 }
   
   h2, h3 {
@@ -78,9 +78,9 @@ nav {
   width: 500px;
   text-align: center;
     a {
-      color: #F7C21A;
-    &:hover {
       color: #ffffff;
+    &:hover {
+      color: #F7C21A;
       text-decoration: none;;
       }
     }
@@ -93,9 +93,9 @@ nav {
   text-align: center;
   color: #F7C21A;
     a {
-      color: #F7C21A;
-    &:hover {
       color: #ffffff;
+    &:hover {
+      color: #F7C21A;
       text-decoration: none;;
       }
     }
@@ -115,7 +115,14 @@ nav {
   }
 }
 
-
+.deck-button {
+  a {
+    color: #ffffff;
+  &:hover {
+    color: #F7C21A;
+    }
+  }
+}
 
 
 

@@ -10,11 +10,11 @@ class DecksController < ApplicationController
   end
 
   def new
-  	@deck = Deck.new
+  	@deck = @decks.build
   end
 
   def create
-  	@deck = Deck.new(deck_params)
+  	@deck = @decks.build(deck_params)
 
   	if @deck.save
   	  redirect_to @deck, notice: "Deck Created"
@@ -23,12 +23,13 @@ class DecksController < ApplicationController
   	end
   end
 
+
   def edit
   end
 
   def update
   	if @deck.update(deck_params)
-  	  redirect_to @deck, notice: "Deck Updated"
+  	  redirect_to deck_path, notice: "Deck Updated"
   	else
   	  render 'edit'
   	end
@@ -40,6 +41,7 @@ class DecksController < ApplicationController
   end
 end
 
+
   private
 
   def deck_params
@@ -49,6 +51,4 @@ end
   def find_deck
     @deck = Deck.find(params[:id])
   end
-
-
 

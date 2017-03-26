@@ -4,4 +4,9 @@
       .card
         %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"
         %p= deck.description.truncate_words(20)
+        %br
+        %br
+        .deck-button
+          = link_to "Edit Deck", edit_deck_path(deck), class: "btn btn-info"
+          = link_to "Delete Deck", deck_path(deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 

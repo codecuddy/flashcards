@@ -1,10 +1,7 @@
 .panel-body
   %h2= @deck.title + ": " + @deck.description
 
-  %h3= "Update #{@deck.title}'s Deck Info"
-  = link_to "Edit Deck", edit_deck_path(@deck), class: "btn btn-info"
-  = link_to "Delete Deck", deck_path(@deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
-  = link_to "Back", root_path, class: "btn btn-info"
+  = link_to "Back to All Decks", root_path, class: "btn btn-info"
   %hr
 
   = render "cards/form"

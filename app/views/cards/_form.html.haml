@@ -1,4 +1,4 @@
-= simple_form_for ([@deck, @deck.cards.create]), url: {action: "create"}, :method => :POST do |f| 
+= simple_form_for ([@deck, @deck.cards.create]) do |f| 
   %h3= "New Card in the #{@deck.title} deck"
   .forms-field 
     .form-group
