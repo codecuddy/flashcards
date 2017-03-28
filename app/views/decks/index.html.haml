@@ -9,4 +9,5 @@
         .deck-button
           = link_to "Edit Deck", edit_deck_path(deck), class: "btn btn-info"
           = link_to "Delete Deck", deck_path(deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
-
+  .col-sm-6.col-sm-offset-5
+    %p= link_to "Charlie Cuddy 2017", "https://github.com/codecuddy", target: "blank_"
