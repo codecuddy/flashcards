@@ -16,8 +16,6 @@
         %li= link_to "Hello, [Name]", root_path, class: "hello_user"
         %li= link_to "New Deck", new_deck_path
 
-
-         
   .container
     -flash.each do |name, msg|
       =content_tag :div, msg, class: "alert alert-info"

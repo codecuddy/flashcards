@@ -1,7 +1,7 @@
 = simple_form_for :card, url: deck_cards_path(@deck) do |f| 
   %h3= "New Card in the #{@deck.title} deck"
   .forms-field 
-    .form-group
+    .form-group.show-title
       = f.input :title, label: "Front of Card", input_html: { class: 'form-control' }
       = f.input :description, label: "Back of Card", input_html: { class: 'form-control' }
     = f.submit :submit, class: "btn btn-info"
