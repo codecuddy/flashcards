@@ -5,6 +5,7 @@ class CardsController < ApplicationController
 
   def create
     @card = @deck.cards.create(card_params)
+    @card.user_id = current_user.id
     if @card.save
       redirect_to deck_path(@deck), notice: "Card Created"
     else
