@@ -1,7 +1,8 @@
 .panel-body
-  %h2= @deck.title + ": " + @deck.description
+  .deck-title-desc
+    %h2= @deck.title + ": " + @deck.description
 
-  = link_to "Back to All Decks", root_path, class: "btn btn-info"
+    = link_to "Back to All Decks", root_path, class: "btn btn-info"
   %hr
   
   = render "cards/form"
