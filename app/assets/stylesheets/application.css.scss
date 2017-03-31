@@ -72,6 +72,7 @@ nav {
     color: #F7C21A;
   }
 
+
 .card-title-box {
   background-color: #222222;
   height: 300px;
@@ -90,7 +91,6 @@ nav {
   background-color: #222222;
   height: 300px;
   width: 500px;
-  text-align: center;
   color: #F7C21A;
   padding: 60px 15px 70px 15px;
     a {
@@ -102,10 +102,16 @@ nav {
     }
   }
 
+.show-title {
+  text-align: left;
+}
+
 .panel-body {
+  text-align: center;
   h1 {
     color: #F7C21A;
   }
+
 }
 
 .forms-field {
@@ -125,5 +131,8 @@ nav {
   }
 }
 
+.footer {
+  text-align: center;
+}
 
 
