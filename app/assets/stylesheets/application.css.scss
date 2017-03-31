@@ -59,7 +59,11 @@ nav {
   .card-show {
     color: #F7C21A;
     margin: auto auto auto auto;
-    padding: 80px 15px 70px 15px;
+    padding: 0px 15px 50px 15px;
+}
+
+.card-content {
+  padding: 80px 15px 0px 15px;
 }
 
 .card-cards {
@@ -127,6 +131,7 @@ nav {
 }
 
 .deck-button {
+  padding: 0px 15px 0px 15px;
   a {
     color: #ffffff;
   &:hover {

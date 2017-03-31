@@ -16,10 +16,11 @@
         %ul.nav.navbar-nav.navbar-left
           %li= link_to "Hello, #{current_user.email}", root_path, class: "hello_user"
           %li= link_to "New Deck", new_deck_path
+        .nav.navbar-nav.navbar-right
           %li= link_to "Settings", edit_user_registration_path
           %li= link_to "Sign Out", destroy_user_session_path, method: :delete
       - else
-        %ul.nav.navbar-nav.navbar-left
+        %ul.nav.navbar-nav.navbar-right
           %li= link_to "Sign Up", new_user_registration_path
           %li= link_to "Sign In", new_user_session_path
 
