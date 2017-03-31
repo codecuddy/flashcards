@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-
+  before_action :authenticate_user!
   before_action :find_deck, only: [:create, :edit, :update, :destroy]
   before_action :find_card, only: [:edit, :update, :destroy]
 

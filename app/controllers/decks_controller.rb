@@ -1,5 +1,5 @@
 class DecksController < ApplicationController
-
+   before_action :authenticate_user!
    before_action :find_deck, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -10,11 +10,11 @@ class DecksController < ApplicationController
   end
 
   def new
-  	@deck = Deck.new
+  	@deck = current_user.decks.build
   end
 
   def create
-  	@deck = Deck.new(deck_params)
+  	@deck = current_user.decks.build(deck_params)
 
   	if @deck.save
   	  redirect_to @deck, notice: "Deck Created"
