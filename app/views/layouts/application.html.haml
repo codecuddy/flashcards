@@ -15,6 +15,7 @@
       - if user_signed_in?
         %ul.nav.navbar-nav.navbar-left
           %li= link_to "Hello, #{current_user.email}", root_path, class: "hello_user"
+          %li= link_to "Other Users", root_path, class: "hello_user"
           %li= link_to "New Deck", new_deck_path
         .nav.navbar-nav.navbar-right
           %li= link_to "Settings", edit_user_registration_path
