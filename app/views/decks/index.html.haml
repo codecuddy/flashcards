@@ -1,17 +1,20 @@
 .col-sm-6.col-sm-offset-3
-  .container 
-    - @decks.each do |deck|
-      .box.panel.panel-default.deck-title-box
-        .card-show
-          .card-content
-            %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"
-            %p= deck.description.truncate_words(20)
-            %br
-            %br
-            %h6= "[ Cards in Deck: #{deck.cards.count} ]"
+  .container
+    - if @decks.any? 
+      - @decks.each do |deck|
+        .box.panel.panel-default.deck-title-box
+          .card-show
+            .card-content
+              %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"
+              %p= deck.description.truncate_words(20)
+              %br
+              %br
+              %h6= "[ Cards in Deck: #{deck.cards.count} ]"
 
-          .deck-button
-            = link_to "Edit Deck", edit_deck_path(deck), class: "btn btn-info"
-            = link_to "Delete Deck", deck_path(deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
-  .footer
-    %p= link_to "Charlie Cuddy 2017", "https://github.com/codecuddy", target: "blank_"
+            .deck-button
+              = link_to "Edit Deck", edit_deck_path(deck), class: "btn btn-info"
+              = link_to "Delete Deck", deck_path(deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+
+    -else  
+      %h1= link_to "Create Your First Deck", new_deck_path, class: "create-first-deck"
+      

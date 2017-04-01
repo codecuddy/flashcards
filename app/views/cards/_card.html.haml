@@ -2,10 +2,10 @@
   - @deck.cards.each do |card|
     .box.panel.panel-default.show-card-box
       %h3= "Front of Card"
-      %p= card.title.current_user.id
+      %p= card.title
 
       %h3= "Back of Card"
-      %p= card.description.current_user.id
-      
+      %p= card.description
+
       = link_to "Edit Card", edit_deck_card_path(card.deck, card), class: "btn btn-info"
       = link_to "Delete Card", deck_card_path(card.deck, card), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
