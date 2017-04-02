@@ -1,7 +1,13 @@
 class CardsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_deck, only: [:create, :edit, :update, :destroy]
+  before_action :find_deck, only: [:create, :edit, :update, :destroy, :present]
   before_action :find_card, only: [:edit, :update, :destroy]
+
+  def present
+    @index = params[:card_id].to_i
+    @cards = Card.where(deck_id: params[:deck_id])
+    @card = @cards[@index]
+  end
 
   def create
     @card = @deck.cards.create(card_params)

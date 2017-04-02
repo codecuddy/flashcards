@@ -15,3 +15,20 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  $('#card').click(function() {
+    if ($('#card').hasClass('flipped')) {
+      $('#front').show();
+      $('#back').hide();
+    }else{
+      $('#back').show();
+      $('#front').hide();
+    };
+    $('#card').toggleClass('flipped');
+  });
+  $('#add-card').click(function() {
+    $('#add-card-container').hide();
+    $('#term-input-container').show();
+  })
+})
