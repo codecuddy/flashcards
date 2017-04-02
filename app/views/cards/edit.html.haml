@@ -1,8 +1,9 @@
-.forms-field
-  %h1= "Edit Card"
+.container-index
+  .forms-field
+    %h1= "Edit Card"
 
-  = simple_form_for ([@deck, @card]) do |f|
-    = f.input :title, lable: "Front of Card"
-    = f.input :description, lable: "Back of Card"
-    = f.button :submit, class: "btn-info"
-    = link_to "Cancel", deck_path(@deck), class: "btn btn-info"
+    = simple_form_for ([@deck, @card]) do |f|
+      = f.input :title, lable: "Front of Card"
+      = f.input :description, lable: "Back of Card"
+      = f.button :submit, class: "btn-info"
+      = link_to "Cancel", deck_path(@deck), class: "btn btn-info"

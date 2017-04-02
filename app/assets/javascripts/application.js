@@ -27,6 +27,7 @@ $(document).on('turbolinks:load', function() {
     };
     $('#card').toggleClass('flipped');
   });
+  
   $('#add-card').click(function() {
     $('#add-card-container').hide();
     $('#term-input-container').show();

@@ -36,6 +36,10 @@ nav {
   }
 }
 
+.container-index {
+  padding-top: 75px;
+}
+
 .hello_user {
   text-decoration: none;
   pointer-events: none;
@@ -148,13 +152,30 @@ nav {
   color: #F7C21A;
 }
 
-
-
 .card-click-area {
   height: 300px;
   width: 500px;
 }
 
+.card-title-box {
+  background-color: #021D9F;
+  height: 300px;
+  width: 500px;
+  color: #F7C21A;
+}
+
+#card {
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  cursor: pointer;
+}
+
 #back {
+  height: -200px;
+  transform: rotateX(180deg);
   display: none;
+}
+
+.flipped {
+  transform: rotateX(180deg);
 }

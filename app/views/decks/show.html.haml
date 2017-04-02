@@ -1,13 +1,14 @@
-.panel-body
-  .deck-title-desc
-    %h2= @deck.title + ": " + @deck.description
+.container-index
+  .panel-body
+    .deck-title-desc
+      %h2= @deck.title + ": " + @deck.description
 
-    =link_to 'Practice Deck', deck_card_present_path(@deck.id, 0), class: "btn btn-info"
+      =link_to 'Practice Deck', deck_card_present_path(@deck.id, 0), class: "btn btn-info"
 
-  %hr
+    %hr
   
-  = render "cards/form"
-  %br
-  = render "cards/card"
+    = render "cards/form"
+    %br
+    = render "cards/card"
 
   
