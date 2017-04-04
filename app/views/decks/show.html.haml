@@ -1,12 +1,12 @@
 .card-clearance
   .center-title
     %h2= @deck.title + ": " + @deck.description
-
+    %br
     -if @deck.cards.any?
       =link_to 'Practice Deck', deck_card_present_path(@deck.id, 0), class: "btn btn-lg btn-info"
     -else
       %p= "[Create Cards in Order to Practice]"
-
+  %br
   %hr
   .new-card-header
     %h3= "Create a New Card in Deck: #{@deck.title}" 
