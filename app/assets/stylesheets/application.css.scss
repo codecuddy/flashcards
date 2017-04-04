@@ -22,6 +22,29 @@ body {
 	background-color: #021D9F;
 }
 
+.center-title {
+  text-align: center;
+} 
+
+h2, h3 {
+  color: #F7C21A;
+}
+
+/* Give padding so cards clear out from under Navbar */
+.card-clearance {
+  padding-top: 75px;
+}
+
+/* Style for first log in 'Create First Deck' message */
+.create-first-deck {
+  color: #F7C21A;
+}
+
+
+/* 
+NAVBAR
+*/
+
 nav {
   .navbar-brand {
     a {
@@ -36,106 +59,39 @@ nav {
   }
 }
 
-.container-index {
-  padding-top: 75px;
-}
-
+/* Deactivate Link in Navbar */
 .hello_user {
   text-decoration: none;
   pointer-events: none;
   cursor: default;
 }
 
-.deck-title-box {
+
+
+
+/* 
+CARD INFORMATION
+*/
+
+/* The decks and cards style */
+.card-layout {
   background-color: #222222;
   height: 300px;
   width: 500px;
   text-align: center;
-    a {
-      color: #F7C21A;
-    &:hover {
-      color: #ffffff;
-      text-decoration: none;;
-      }
-    }
-  }
-
-  .card-show {
-    color: #F7C21A;
-    margin: auto auto auto auto;
-    padding: 0px 15px 50px 15px;
-}
-
-.card-content {
+  color: #F7C21A;
   padding: 80px 15px 0px 15px;
-}
-
-.card-cards {
-    color: #F7C21A;
-    margin: auto auto auto auto;
-    padding: 0px 15px 70px 15px;
-}
-  
-  h2, h3 {
-    color: #F7C21A;
-  }
-
-
-.card-title-box {
-  background-color: #222222;
-  height: 300px;
-  width: 500px;
-  text-align: center;
     a {
-      color: #ffffff;
-    &:hover {
       color: #F7C21A;
+    &:hover {
+      color: #ffffff;
       text-decoration: none;;
       }
     }
   }
 
-.show-card-box {
-  background-color: #222222;
-  height: 300px;
-  width: 500px;
-  color: #F7C21A;
-  padding: 60px 15px 70px 15px;
-    a {
-      color: #ffffff;
-    &:hover {
-      color: #F7C21A;
-      text-decoration: none;;
-      }
-    }
-  }
-.deck-title-desc {
-  text-align: center;
-  padding: 0 0 0 100px;
-}  
-
-.show-title {
-  text-align: left;
-}
-
-.panel-body {
-  text-align: center;
-  h1 {
-    color: #F7C21A;
-  }
-
-}
-
-.forms-field {
-  color: #F7C21A;
-  padding: 0 100px 0 100px;
-  h1 {
-    margin-left: 100px;
-  }
-}
-
-.deck-button {
-  padding: 0px 15px 0px 15px;
+/* Button styling on cards */
+.button-on-cards {
   a {
     color: #ffffff;
   &:hover {
@@ -144,30 +100,26 @@ nav {
   }
 }
 
-.footer {
-  text-align: center;
-}
-
-.create-first-deck {
-  color: #F7C21A;
-}
-
 .card-click-area {
   height: 300px;
   width: 500px;
 }
 
-.card-title-box {
-  background-color: #021D9F;
-  height: 300px;
-  width: 500px;
-  color: #F7C21A;
+/* Indent heading on deck--show page for car create form */
+.new-card-header {
+  text-align: left;
+  padding-left: 100px;
 }
 
+/* FLIP THE CARD STYLING */
 #card {
   transform-style: preserve-3d;
-  transition: transform .2s;
+  transition: transform .4s;
   cursor: pointer;
+}
+
+#front{
+
 }
 
 #back {
@@ -178,3 +130,20 @@ nav {
 .flipped {
   transform: rotateX(180deg);
 }
+
+
+
+/*
+FORMS
+*/
+
+.forms-field {
+  color: #F7C21A;
+  padding: 0 100px 0 100px;
+  h1 {
+    padding-left: 100px;
+  }
+}
+
+
+
