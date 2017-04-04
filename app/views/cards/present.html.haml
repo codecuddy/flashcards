@@ -1,9 +1,8 @@
 .col-sm-6.col-sm-offset-3.card-clearance
-  .card-show
-    .panel.panel-default.card-layout.card-click-area#card
-      %h3{id: "front"}=@card.title
-      %h3{id: "back"}=@card.description
-
+  .panel.panel-default.card-layout.card-click-area#card
+    %h3{id: "front"}=@card.title
+    %h3{id: "back"}=@card.description
+  .center-title
     -nextIndex = @index + 1
     -previousIndex = @index - 1
       

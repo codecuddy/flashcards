@@ -1,14 +1,17 @@
-.col-sm-6.col-sm-offset-3
-  .center-title
-    %h3= "Review the Entire Deck"
-    - @deck.cards.each do |card|
-      .panel.panel-default.card-layout
-        %h3= "Front of Card"
-        %p= card.title
 
-        %h3= "Back of Card"
-        %p= card.description
+.center-title
+  -if @deck.cards.any? 
+    %h3= "Review Your Entire Deck"
+  -else
+    %h3= "Create Your First Card for the Deck"
+  - @deck.cards.each do |card|
+    .panel.panel-default.card-layout
+      %h3= "Front of Card"
+      %p= card.title
+
+      %h3= "Back of Card"
+      %p= card.description
         
-        .button-on-cards 
-          = link_to "Edit Card", edit_deck_card_path(card.deck, card), class: "btn btn-info"
-          = link_to "Delete Card", deck_card_path(card.deck, card), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
+      .button-on-cards 
+        = link_to "Edit Card", edit_deck_card_path(card.deck, card), class: "btn btn-info"
+        = link_to "Delete Card", deck_card_path(card.deck, card), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"

@@ -26,7 +26,7 @@ body {
   text-align: center;
 } 
 
-h2, h3 {
+h2, h3, p {
   color: #F7C21A;
 }
 
@@ -80,6 +80,7 @@ CARD INFORMATION
   width: 500px;
   text-align: center;
   color: #F7C21A;
+  margin: 0 auto 15px auto;
   padding: 80px 15px 0px 15px;
     a {
       color: #F7C21A;
@@ -100,10 +101,6 @@ CARD INFORMATION
   }
 }
 
-.card-click-area {
-  height: 300px;
-  width: 500px;
-}
 
 /* Indent heading on deck--show page for car create form */
 .new-card-header {
@@ -113,6 +110,7 @@ CARD INFORMATION
 
 /* FLIP THE CARD STYLING */
 #card {
+  margin: 0 auto 15px auto;
   transform-style: preserve-3d;
   transition: transform .4s;
   cursor: pointer;
@@ -131,6 +129,10 @@ CARD INFORMATION
   transform: rotateX(180deg);
 }
 
+.card-click-area {
+  height: 300px;
+  width: 500px;
+}
 
 
 /*
@@ -145,5 +147,10 @@ FORMS
   }
 }
 
+
+
+.panel.panel-default {
+  margin: 0px auto 15px auto;
+}
 
 

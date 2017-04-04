@@ -2,7 +2,10 @@
   .center-title
     %h2= @deck.title + ": " + @deck.description
 
-    =link_to 'Practice Deck', deck_card_present_path(@deck.id, 0), class: "btn btn-info"
+    -if @deck.cards.any?
+      =link_to 'Practice Deck', deck_card_present_path(@deck.id, 0), class: "btn btn-info"
+    -else
+      %p= "[Create Cards in Order to Practice]"
 
   %hr
   .new-card-header
