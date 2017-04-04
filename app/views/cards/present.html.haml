@@ -5,15 +5,17 @@
   .center-title
     -nextIndex = @index + 1
     -previousIndex = @index - 1
-      
+    
+    %h3= "Card: #{@index+1} of #{@deck.cards.length}"  
     -if nextIndex == 1
-      = link_to '', deck_path(@deck.id), class: "btn card-back-btn btn-warning glyphicon glyphicon-arrow-left"
+      = link_to '', deck_path(@deck.id), class: "btn btn-lg card-back-btn btn-warning glyphicon glyphicon-arrow-left"
     -else
-      = link_to '', deck_card_present_path(@deck.id, previousIndex), class: "btn card-back-btn btn-warning glyphicon glyphicon-arrow-left"
+      = link_to '', deck_card_present_path(@deck.id, previousIndex), class: "btn btn-lg card-back-btn btn-warning glyphicon glyphicon-arrow-left"
 
     -if @cards.length > nextIndex
-      = link_to '', deck_card_present_path(@deck.id, nextIndex), class: "btn card-next-btn btn-primary glyphicon glyphicon-arrow-right"
+      = link_to '', deck_card_present_path(@deck.id, nextIndex), class: "btn btn-lg card-next-btn btn-primary glyphicon glyphicon-arrow-right"
     -else
-      = link_to '', deck_path(@deck.id), class: "btn card-next-btn btn-primary glyphicon glyphicon-arrow-right"
+      = link_to '', deck_path(@deck.id), class: "btn btn-lg card-next-btn btn-primary glyphicon glyphicon-arrow-right"
+
 
 

@@ -41,9 +41,9 @@ h2, h3, p {
 }
 
 
-/* 
-NAVBAR
-*/
+/*********************** 
+        NAVBAR
+***********************/
 
 nav {
   .navbar-brand {
@@ -69,9 +69,9 @@ nav {
 
 
 
-/* 
-CARD INFORMATION
-*/
+/********************** 
+   CARD INFORMATION
+**********************/
 
 /* The decks and cards style */
 .card-layout {
@@ -91,7 +91,7 @@ CARD INFORMATION
     }
   }
 
-/* Button styling on cards */
+/*** Button styling on cards ***/
 .button-on-cards {
   a {
     color: #ffffff;
@@ -102,7 +102,7 @@ CARD INFORMATION
 }
 
 
-/* Indent heading on deck--show page for car create form */
+/*** Indent heading on deck--show page for car create form ***/
 .new-card-header {
   text-align: left;
   padding-left: 100px;
@@ -117,12 +117,13 @@ CARD INFORMATION
 }
 
 #front{
-
+  margin: 50px;
 }
 
 #back {
   transform: rotateX(180deg);
   display: none;
+  margin: 50px;
 }
 
 .flipped {
@@ -135,9 +136,9 @@ CARD INFORMATION
 }
 
 
-/*
-FORMS
-*/
+/**********************
+        FORMS
+**********************/
 
 .forms-field {
   color: #F7C21A;
@@ -148,9 +149,10 @@ FORMS
 }
 
 
-
 .panel.panel-default {
   margin: 0px auto 15px auto;
 }
+
+
 
 
