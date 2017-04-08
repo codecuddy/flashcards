@@ -1,4 +1,5 @@
 .col-sm-6.col-sm-offset-3.card-clearance
+  %h1= "Currently Practicing: #{@deck.title}"
   .panel.panel-default.card-layout.card-click-area#card
     %h3{id: "front"}=@card.title
     %h3{id: "back"}=@card.description
