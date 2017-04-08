@@ -1,6 +1,8 @@
 .col-xs-10.col-xs-offset-1.col-md-6.col-md-offset-3
   .card-clearance
-    - if @decks.any? 
+    - if @decks.any?
+      %h1= "List of All Decks"
+      %p= "[ Click on Deck to Practice or Add Cards ]" 
       - @decks.each do |deck|
         .panel.panel-default.card-layout
           %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"
@@ -14,5 +16,14 @@
             = link_to "Delete Deck", deck_path(deck), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"
 
     -else  
-      %h1= link_to "Create Your First Deck", new_deck_path, class: "create-first-deck"
+      %br
+      %h1= "Welcome to FlashCards!"
+      %br
+      %h4= "Get started by creating your decks. Simply give your deck a title and a brief description of what the cards in that deck will be all about." 
+      %h4= "Next add the cards, with a front and back, assigned to each deck." 
+      %h4= "Once your decks have cards you can begin practicing and learning the information you've added to your cards!" 
+      %h4= "It is as easy as that. What are you waiting for?"
+      %br
+      %h1= link_to "Click Here to Get Started with Your First Deck", new_deck_path, class: "create-first-deck"
+
       
