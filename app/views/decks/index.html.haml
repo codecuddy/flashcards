@@ -2,7 +2,8 @@
   .card-clearance
     - if @decks.any?
       %h1= "List of All Decks"
-      %p= "[ Click on Deck to Practice or Add Cards ]" 
+      .descHowToUseDeck
+        %p= "[ Click on Deck to Practice or Add Cards ]" 
       - @decks.each do |deck|
         .panel.panel-default.card-layout
           %h3= link_to deck.title.truncate_words(10), deck_path(deck), class: "deck-title"

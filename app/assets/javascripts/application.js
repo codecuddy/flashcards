@@ -33,3 +33,8 @@ $(document).on('turbolinks:load', function() {
     $('#term-input-container').show();
   })
 })
+
+
+
+
+

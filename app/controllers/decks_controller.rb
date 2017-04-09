@@ -37,7 +37,6 @@ class DecksController < ApplicationController
 
   def destroy
   	@deck.destroy
-    redirect_to root_path
   end
 
 

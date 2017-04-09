@@ -25,12 +25,18 @@ body {
 .center-title {
   text-align: center;
 } 
-h1, p, h4{
+h1, h4{
   text-align: center;
   color: #F7C21A;
 }
 
 h2, h3 {
+  color: #F7C21A;
+}
+
+/* Center description of how to use app on index */
+.descHowToUseDeck {
+  text-align: center;
   color: #F7C21A;
 }
 
