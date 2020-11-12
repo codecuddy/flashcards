@@ -24,7 +24,7 @@ class CardsController < ApplicationController
 
   def update
     if @card.update(card_params)
-      redirect_to deck_path(@deck), notice: "Card Updated"
+      redirect_to deck_path(@card), notice: "Card Updated"
     else
       render 'edit'
     end

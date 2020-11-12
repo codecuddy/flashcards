@@ -17,37 +17,45 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
 body {
-	background-color: #021D9F;
+    background-color: #021D9F;
 }
 
 .center-title {
-  text-align: center;
-} 
-h1, h4{
-  text-align: center;
-  color: #F7C21A;
+    text-align: center;
 }
 
-h2, h3 {
-  color: #F7C21A;
+h1,
+h4 {
+    text-align: center;
+    color: #F7C21A;
 }
+
+h2,
+h3 {
+    color: #F7C21A;
+}
+
 
 /* Center description of how to use app on index */
+
 .descHowToUseDeck {
-  text-align: center;
-  color: #F7C21A;
+    text-align: center;
+    color: #F7C21A;
 }
+
 
 /* Give padding so cards clear out from under Navbar */
+
 .card-clearance {
-  padding-top: 75px;
+    padding-top: 75px;
 }
 
+
 /* Style for first log in 'Create First Deck' message */
+
 .create-first-deck {
-  color: #F7C21A;
+    color: #F7C21A;
 }
 
 
@@ -56,93 +64,101 @@ h2, h3 {
 ***********************/
 
 nav {
-  .navbar-brand {
-    a {
-      color: #F7C21A;
-      font-weight: bold;
-      font-size: 1.6em;
-    &:hover {
-        color: #ffffff;
-        text-decoration: none;
-      }
+    .navbar-brand {
+        a {
+            color: #F7C21A;
+            font-weight: bold;
+            font-size: 1.6em;
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
     }
-  }
 }
+
 
 /* Deactivate Link in Navbar */
+
 .hello_user {
-  text-decoration: none;
-  pointer-events: none;
-  cursor: default;
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
 }
-
-
 
 
 /********************** 
    CARD INFORMATION
 **********************/
 
+
 /* The decks and cards style */
+
 .card-layout {
-  background-color: #222222;
-  height: 300px;
-  width: 500px;
-  text-align: center;
-  color: #F7C21A;
-  margin: 0 auto 15px auto;
-  padding: 80px 15px 0px 15px;
+    background-color: #222222;
+    height: 300px;
+    width: 500px;
+    text-align: center;
+    color: #F7C21A;
+    margin: 0 auto 15px auto;
+    padding: 80px 15px 0px 15px;
     a {
-      color: #F7C21A;
-    &:hover {
-      color: #ffffff;
-      text-decoration: none;;
-      }
+        color: #F7C21A;
+        &:hover {
+            color: #ffffff;
+            text-decoration: none;
+            ;
+        }
     }
-  }
+}
+
 
 /*** Button styling on cards ***/
+
 .button-on-cards {
-  a {
-    color: #ffffff;
-  &:hover {
-    color: #F7C21A;
+    a {
+        color: #ffffff;
+        &:hover {
+            color: #F7C21A;
+        }
     }
-  }
 }
 
 
 /*** Indent heading on deck--show page for car create form ***/
+
 .new-card-header {
-  text-align: left;
-  padding-left: 100px;
+    text-align: left;
+    padding-left: 100px;
 }
+
 
 /* FLIP THE CARD STYLING */
+
 #card {
-  margin: 0 auto 15px auto;
-  transform-style: preserve-3d;
-  transition: transform .4s;
-  cursor: pointer;
+    margin: 0 auto 15px auto;
+    transform-style: preserve-3d;
+    transition: transform .4s;
+    cursor: pointer;
 }
 
-#front{
-  margin: 50px;
+#front {
+    margin: 50px;
 }
 
 #back {
-  transform: rotateX(180deg);
-  display: none;
-  margin: 60px;
+    transform: rotateX(180deg);
+    display: none;
+    margin: 60px;
 }
 
 .flipped {
-  transform: rotateX(180deg);
+    transform: rotateX(180deg);
 }
 
 .card-click-area {
-  height: 300px;
-  width: 500px;
+    height: 300px;
+    width: 500px;
 }
 
 
@@ -151,22 +167,16 @@ nav {
 **********************/
 
 .forms-field {
-  color: #F7C21A;
-  padding: 0 100px 0 100px;
-  h1 {
-    padding-left: 100px;
-  }
+    color: #F7C21A;
+    padding: 0 100px 0 100px;
+    h1 {
+        padding-left: 100px;
+    }
 }
-
 
 .panel.panel-default {
-  margin: 0px auto 15px auto;
+    margin: 0px auto 15px auto;
 }
-
-
-
-
-
 
 
 /*********************
@@ -175,77 +185,65 @@ nav {
 **********************
 **********************/
 
-
 @media only screen and (max-device-width: 480px) {
-
-.panel.panel-default {
-
-}
-
-/********************** 
+    .panel.panel-default {}
+    /********************** 
    CARD INFORMATION
 **********************/
-
-/* The decks and cards style */
-.card-layout {
-  background-color: #222222;
-  width: 400px;
-  height: 260px;
-  text-align: center;
-  color: #F7C21A;
-  margin: 0;
-  padding: 80px 15px 0px 15px;
-    a {
-      color: #F7C21A;
-    &:hover {
-      color: #ffffff;
-      text-decoration: none;;
-      }
+    /* The decks and cards style */
+    .card-layout {
+        background-color: #222222;
+        width: 400px;
+        height: 260px;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+        color: #F7C21A;
+        margin: 0;
+        padding: 80px 15px 0px 15px;
+        a {
+            color: #F7C21A;
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+                ;
+            }
+        }
     }
-  }
-
-/*** Button styling on cards ***/
-.button-on-cards {
-  a {
-    color: #ffffff;
-  &:hover {
-    color: #F7C21A;
+    /*** Button styling on cards ***/
+    .button-on-cards {
+        a {
+            color: #ffffff;
+            &:hover {
+                color: #F7C21A;
+            }
+        }
     }
-  }
+    /*** Indent heading on deck--show page for car create form ***/
+    .new-card-header {
+        text-align: left;
+        padding-left: 100px;
+    }
+    /* FLIP THE CARD STYLING */
+    #card {
+        margin: 0 auto 15px auto;
+        transform-style: preserve-3d;
+        transition: transform .4s;
+        cursor: pointer;
+    }
+    #front {
+        margin: 50px;
+    }
+    #back {
+        transform: rotateX(180deg);
+        display: none;
+        margin: 60px;
+    }
+    .flipped {
+        transform: rotateX(180deg);
+    }
+    .card-click-area {
+        height: 300px;
+        width: 500px;
+    }
 }
-
-
-/*** Indent heading on deck--show page for car create form ***/
-.new-card-header {
-  text-align: left;
-  padding-left: 100px;
-}
-
-/* FLIP THE CARD STYLING */
-#card {
-  margin: 0 auto 15px auto;
-  transform-style: preserve-3d;
-  transition: transform .4s;
-  cursor: pointer;
-}
-
-#front{
-  margin: 50px;
-}
-
-#back {
-  transform: rotateX(180deg);
-  display: none;
-  margin: 60px;
-}
-
-.flipped {
-  transform: rotateX(180deg);
-}
-
-.card-click-area {
-  height: 300px;
-  width: 500px;
-}
-}
-
