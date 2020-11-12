@@ -232,18 +232,18 @@ nav {
         cursor: pointer;
     }
     #front {
-        margin: 50px;
+        margin: 100px;
     }
     #back {
         transform: rotateX(180deg);
         display: none;
-        margin: 60px;
+        margin: 0px;
     }
     .flipped {
         transform: rotateX(180deg);
     }
     .card-click-area {
-        height: 300px;
+        height: 400px;
         width: 500px;
     }
 }
